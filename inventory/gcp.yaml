@@ -1,0 +1,17 @@
+---
+all:
+  vars:
+    #Use this section to enter GCP related information
+    zone: <ZONE>
+    region: <REGION>
+    project_id: <PROJECT_ID>
+    gcloud_sa_path: "~/serviceaccount.json"
+    credentials_file: "{{ lookup('env','HOME') }}/{{ gcloud_sa_path }}"
+    gcloud_service_account: <serviceaccount>.iam.gserviceaccount.com
+
+    #Use this section to enter k8s cluster info
+    cluster_name: <CLUSTER_NAME>
+    initial_node_count: 1
+    disk_size_gb: 10
+    disk_type: pd-ssd
+    machine_type: n1-standard-2
